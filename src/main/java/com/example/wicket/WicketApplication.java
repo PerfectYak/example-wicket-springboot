@@ -2,6 +2,7 @@ package com.example.wicket;
 
 import com.example.wicket.page.login.LoginPage;
 import com.example.wicket.page.main.MainPage;
+import com.example.wicket.panel.autocompleat.AutoCompletePage;
 import com.giffing.wicket.spring.boot.starter.app.WicketBootSecuredWebApplication;
 import org.apache.wicket.authroles.authentication.AbstractAuthenticatedWebSession;
 import org.apache.wicket.markup.html.WebPage;
@@ -28,6 +29,7 @@ public class WicketApplication extends WicketBootSecuredWebApplication {
         getRequestCycleSettings().setResponseRequestEncoding("UTF-8");
         getMarkupSettings().setDefaultMarkupEncoding("UTF-8");
         mountPage("/login", LoginPage.class);
+        mountPage("/autocompleat", AutoCompletePage.class);
     }
 
     @Override
